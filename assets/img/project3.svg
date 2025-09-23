@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450">
+  <rect width="100%" height="100%" fill="#f3f7ff"/>
+  <g font-family="Segoe UI, Roboto, Arial" fill="#0b61ff">
+    <text x="50%" y="45%" font-size="36" text-anchor="middle">Application Vue.js</text>
+    <text x="50%" y="65%" font-size="16" text-anchor="middle" fill="#2a4b8f">Vue 3 • Vite • Integration Dolibarr</text>
+  </g>
+</svg>

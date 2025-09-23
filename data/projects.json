@@ -1,0 +1,28 @@
+[
+  {
+    "id": "p1",
+    "title": "ShoeStore Pro",
+    "description": "application de gestion de magasin de chaussures offrant CRUD sur le stock, enregistrement des ventes, suivi de caisse, historiques/audits, exports PDF et tableaux de bord statistiques — le tout optimisé pour usage desktop et déploiement portable.",
+    "url": "video.html?project=p1",
+    "image": "assets/img/app_icon.ico",
+    "video": "assets/media/demo3.mp4"
+  },
+  {
+    "id": "p2",
+    "title": "Site vitrine",
+    "description": "Site vitrine Web réactive pour l'organisation TANINJANAKA, construite avec React + Vite et stylée avec Tailwind. Le site est bilingue (FR/EN), accessible et orienté présentation/engagement, avec un footer contenant les crédits du créateur et des liens de contact.",
+    "url": "video.html?project=p2",
+    "image": "assets/img/taninjanaka.webp",
+    
+    "video": "assets/media/demo2.mp4"
+  }
+  ,
+  {
+    "id": "p3",
+    "title": "Application Vue.js",
+    "description": "Développé une SPA Vue 3 (Vite, axios) intégrée à l’API REST de Dolibarr pour piloter le cycle complet des ordres de fabrication (création, validation, production) avec gestion robuste des erreurs HTTP et des timeouts. La logique métier est strictement encapsulée via des services réutilisables : validation automatique des nomenclatures (BOM), contrôles bloquants de stock avant création/validation/production, normalisation et validation des données et garantie d’unicité des références. Implémenté des opérations atomiques et traçables (validation BOM, appel produceandconsume), diagnostics post-action, journalisation détaillée et stratégies de résilience (retries contrôlés, validateStatus) pour assurer la fiabilité et la maintenabilité de l’intégration.",
+    "url": "video.html?project=p3",
+    "image": "assets/img/project3.svg",
+    "video": "assets/media/demo-reel.mp4"
+  }
+]
