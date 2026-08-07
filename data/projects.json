@@ -25,4 +25,13 @@
     "image": "assets/img/project3.svg",
     "video": "assets/media/demo-reel.mp4"
   }
+  ,
+  {
+    "id": "p4",
+    "title": "Projet réalisé le 25 juillet 2026",
+    "description": "Projet 1 — logiciel sur mesure pour une entreprise : plateforme de gestion (ventes, utilisateurs, posts, stocks). Base de données PostgreSQL Neon (hébergée cloud). Backend Spring Boot 3.3.5 (Java 21) avec JPA/Hibernate, authentification JWT + refresh tokens, soft delete (colonne supprimee_le), configuration CORS pour Angular localhost:4200, déployé sur Railway (Docker multi-stage). Frontend Angular 19 SSR avec environnements séparés (dev localhost:8080 / prod Railway URL) et services centralisés (modal user, benefices, etc). Infra : dev en local (backend + Neon DB + ng serve localhost:4200), prod avec backend Railway + Neon DB + frontend Vercel/local. Projet 2 — système de gestion de factures/paiements connecté à un backend Dolibarr, avec deux interfaces React : Backoffice (dashboard statistiques mensuelles, gestion des ventes par produit, import CSV factures/détails/paiements, remises, réinitialisation) et Frontoffice (espace client : connexion, création de factures via panier de produits, règlement des factures). Architecture avec deux couches de remise distinctes : une remise backend par paliers SQLite calculée selon le délai entre date de facture et date de règlement (0j=30%, <7j=20%, <15j=15%, <30j=10%, sinon 0%), stockée dans historique_remise à des fins d'archivage/analyse uniquement, et une remise par ligne, transactionnelle par produit dans le panier (style import CSV Dolibarr), affectant le prix TTC de la ligne.",
+    "url": "video.html?project=p4",
+    "image": "assets/img/placeholder.svg",
+    "video": "assets/media/demo4.mp4"
+  }
 ]
