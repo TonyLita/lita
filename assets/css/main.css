@@ -203,6 +203,20 @@ main.wrap {
   letter-spacing: 0.5px;
 }
 
+.tech-subgroup + .tech-subgroup {
+  margin-top: 1.25rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid rgba(0,0,0,0.1);
+}
+
+.tech-subgroup h4 {
+  color: #666;
+  margin-bottom: 0.75rem;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
 .tech-items {
   display: flex;
   flex-wrap: wrap;
@@ -230,15 +244,8 @@ main.wrap {
   width: 40px;
   height: 40px;
   display: inline-block;
-  background-color: var(--brand-color);
-  -webkit-mask-image: var(--icon-url);
-  mask-image: var(--icon-url);
-  -webkit-mask-size: contain;
-  mask-size: contain;
-  -webkit-mask-repeat: no-repeat;
-  mask-repeat: no-repeat;
-  -webkit-mask-position: center;
-  mask-position: center;
+  object-fit: contain;
+  border-radius: 8px;
 }
 
 .tech-label {
