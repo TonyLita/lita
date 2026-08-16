@@ -309,21 +309,6 @@ main.wrap {
   border-radius: 8px;
 }
 
-.contact-icon--mask {
-  background-color: var(--brand-color);
-  -webkit-mask-image: var(--icon-url);
-  mask-image: var(--icon-url);
-  -webkit-mask-size: contain;
-  mask-size: contain;
-  -webkit-mask-repeat: no-repeat;
-  mask-repeat: no-repeat;
-  -webkit-mask-position: center;
-  mask-position: center;
-}
-
-.icon-facebook { --brand-color: #1877F2; --icon-url: url('../img/icons/facebook.svg'); }
-.icon-tiktok { --brand-color: #000000; --icon-url: url('../img/icons/tiktok.svg'); }
-
 footer {
   background-color: #A9A5C7;
   padding: 1.5rem;
