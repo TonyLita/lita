@@ -277,6 +277,53 @@ main.wrap {
   text-decoration: underline;
 }
 
+.contact-links {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: center;
+  overflow-x: auto;
+  margin-top: 1.5rem;
+  padding: 0.5rem;
+  -webkit-overflow-scrolling: touch;
+}
+
+.contact-link {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s;
+}
+
+.contact-link:hover {
+  transform: translateY(-3px);
+}
+
+.contact-icon {
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.contact-icon--mask {
+  background-color: var(--brand-color);
+  -webkit-mask-image: var(--icon-url);
+  mask-image: var(--icon-url);
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+}
+
+.icon-facebook { --brand-color: #1877F2; --icon-url: url('../img/icons/facebook.svg'); }
+.icon-tiktok { --brand-color: #000000; --icon-url: url('../img/icons/tiktok.svg'); }
+
 footer {
   background-color: #A9A5C7;
   padding: 1.5rem;
