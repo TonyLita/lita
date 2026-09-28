@@ -29,15 +29,16 @@
     const s = document.createElement('canvas');
     s.width = s.height = 256;
     const c = s.getContext('2d');
-    for (let i = 0; i < 40; i++) {
+    for (let i = 0; i < 70; i++) {
       const ang = Math.random() * Math.PI * 2;
-      const dist = Math.random() * 70;
+      const dist = Math.random() * 85;
       const x = 128 + Math.cos(ang) * dist;
       const y = 128 + Math.sin(ang) * dist;
-      const r = rand(25, 60);
+      const r = rand(12, 45);
+      const v = (rand(185, 235)) | 0;
       const g = c.createRadialGradient(x, y, 0, x, y, r);
-      g.addColorStop(0, `rgba(225,225,230,${rand(0.15, 0.35)})`);
-      g.addColorStop(1, 'rgba(225,225,230,0)');
+      g.addColorStop(0, `rgba(${v},${v},${v + 4},${rand(0.12, 0.4)})`);
+      g.addColorStop(1, `rgba(${v},${v},${v + 4},0)`);
       c.fillStyle = g;
       c.fillRect(x - r, y - r, r * 2, r * 2);
     }
@@ -90,17 +91,17 @@
     const e = emitters[side];
     if (!e) return;
     if (particles.length >= MAX) particles.shift();
-    const spread = rand(-25, 25) * Math.PI / 180;
+    const spread = rand(-35, 30) * Math.PI / 180;
     const cos = Math.cos(spread), sin = Math.sin(spread);
     const dx = e.dx * cos - e.dy * sin;
     const dy = e.dx * sin + e.dy * cos;
-    const speed = rand(250, 450);
+    const speed = rand(300, 700);
     particles.push({
       x: e.x, y: e.y,
       vx: dx * speed, vy: dy * speed,
-      r: rand(40, 70),
-      maxR: rand(260, 380),
-      peak: rand(0.55, 0.75),
+      r: rand(30, 60),
+      maxR: rand(180, 320),
+      peak: rand(0.4, 0.6),
       life: rand(2.2, 3),
       age: 0,
       rot: rand(0, Math.PI * 2),
@@ -135,7 +136,7 @@
         continue;
       }
       const t = p.age / p.life;
-      const drag = 1 - 2.2 * dt;
+      const drag = 1 - 1.8 * dt;
       p.vx *= drag;
       p.vy = p.vy * drag - 30 * dt;
       p.x += p.vx * dt;
