@@ -509,6 +509,31 @@ section h2 {
   animation-play-state: paused;
 }
 
+/* JS actif : défilement piloté en JS + scroll manuel (glisser, swipe, trackpad) */
+.tech-marquee.is-scrollable .marquee-track {
+  animation: none;
+}
+
+.tech-marquee.is-scrollable .marquee-row {
+  overflow-x: auto;
+  scrollbar-width: none;
+  cursor: grab;
+}
+
+.tech-marquee.is-scrollable .marquee-row::-webkit-scrollbar {
+  display: none;
+}
+
+.tech-marquee.is-scrollable .marquee-row.is-dragging {
+  cursor: grabbing;
+  user-select: none;
+}
+
+.tech-marquee.is-scrollable img {
+  -webkit-user-drag: none;
+  user-select: none;
+}
+
 .marquee-group {
   display: flex;
   gap: 1.5rem;
