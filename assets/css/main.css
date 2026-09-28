@@ -405,8 +405,10 @@ section h2 {
   background-image:
     url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 200' preserveAspectRatio='none'%3E%3Cdefs%3E%3ClinearGradient id='s' gradientUnits='userSpaceOnUse' x1='150' y1='0' x2='705' y2='0'%3E%3Cstop offset='0' stop-color='%23000' stop-opacity='0'/%3E%3Cstop offset='0.6' stop-color='%23000' stop-opacity='0.28'/%3E%3Cstop offset='1' stop-color='%23000' stop-opacity='0.5'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cg fill='none' stroke='url(%23s)' stroke-width='5' stroke-linecap='round' vector-effect='non-scaling-stroke'%3E%3Cpath d='M150 40 Q330 34 470 44 T705 42' vector-effect='non-scaling-stroke'/%3E%3Cpath d='M150 66 Q330 60 470 70 T705 68' vector-effect='non-scaling-stroke'/%3E%3Cpath d='M180 132 Q360 140 500 128 T705 134' vector-effect='non-scaling-stroke'/%3E%3Cpath d='M180 158 Q360 166 500 154 T705 160' vector-effect='non-scaling-stroke'/%3E%3C/g%3E%3C/svg%3E"),
     radial-gradient(ellipse 22% 90% at 72% 50%, rgba(236, 72, 153, 0.12), transparent 70%),
-    linear-gradient(90deg, #0b0b14 0%, #151521 45%, #1c1c29 70%, #121220 80%, #0b0b14 100%);
-  background-size: 100% 100%;
+    linear-gradient(90deg, rgba(7, 7, 13, 0.86) 0%, rgba(7, 7, 13, 0.72) 45%, rgba(7, 7, 13, 0.6) 70%, rgba(7, 7, 13, 0.78) 82%, rgba(7, 7, 13, 0.88) 100%),
+    url("../img/asphalt.jpg");
+  background-size: 100% 100%, 100% 100%, 100% 100%, cover;
+  background-position: center;
   background-repeat: no-repeat;
 }
 
@@ -506,8 +508,9 @@ section h2 {
 
 .tech-label {
   font-size: 0.75rem;
-  color: var(--text-muted);
+  color: #c9cbe0;
   text-align: center;
+  text-shadow: 0 1px 3px #000, 0 0 8px rgba(0, 0, 0, 0.8);
   transition: color 0.25s;
 }
 
