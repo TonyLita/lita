@@ -237,12 +237,14 @@ section h2 {
 
 /* libellés de section numérotés + filet */
 #tech-stack,
-#contact {
+#contact,
+.detail-section {
   counter-increment: section;
 }
 
 #tech-stack > h2::before,
-#contact > h2::before {
+#contact > h2::before,
+.detail-section > h2::before {
   content: counter(section, decimal-leading-zero);
   display: block;
   width: fit-content;
@@ -656,6 +658,7 @@ footer {
 }
 
 .card {
+  position: relative;
   display: flex;
   flex-direction: column;
   background: var(--panel);
@@ -700,6 +703,7 @@ footer {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center 35%;
   transition: transform 0.5s;
 }
 
@@ -768,6 +772,318 @@ footer {
   border-color: var(--red-hover);
   color: #fff;
   box-shadow: var(--neon);
+}
+
+/* lien étiré : toute la carte est cliquable */
+.card .actions a:first-child::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+}
+
+/* Page détail projet */
+.breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-bottom: 2.5rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--text-dim);
+}
+
+.breadcrumb a {
+  color: var(--text-muted);
+  text-decoration: none;
+}
+
+.breadcrumb a:hover {
+  color: var(--text);
+}
+
+.breadcrumb [aria-current] {
+  color: var(--text);
+}
+
+.project-head {
+  display: grid;
+  grid-template-columns: minmax(0, 340px) minmax(0, 1fr);
+  gap: 4rem;
+  align-items: start;
+  padding-bottom: 4rem;
+  border-bottom: 1px solid var(--hairline);
+}
+
+.project-shot {
+  border: 1px solid var(--hairline-strong);
+  background: var(--panel);
+}
+
+.project-shot img {
+  display: block;
+  width: 100%;
+  max-height: 560px;
+  object-fit: cover;
+  object-position: top;
+}
+
+.project-title {
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  margin-bottom: 1rem;
+}
+
+.project-tagline {
+  color: var(--text);
+  font-size: 1.15rem;
+  margin-bottom: 1.5rem;
+}
+
+.project-intro p {
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+}
+
+.project-intro .bullets {
+  margin-bottom: 1.5rem;
+}
+
+.project-intro .project-closing {
+  color: var(--text);
+  margin-bottom: 2rem;
+}
+
+.detail-section {
+  margin: 5rem 0 0;
+}
+
+.detail-section > h2 {
+  margin-bottom: 2rem;
+}
+
+.detail-empty {
+  padding: 4rem 0;
+}
+
+.detail-empty p {
+  margin: 1rem 0 2rem;
+}
+
+.bullets {
+  list-style: none;
+  display: grid;
+  gap: 0.65rem;
+}
+
+.bullets li {
+  position: relative;
+  padding-left: 1.4rem;
+  color: var(--text);
+}
+
+.bullets li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.62em;
+  width: 6px;
+  height: 6px;
+  background: var(--red);
+}
+
+.bullets--muted li {
+  color: var(--text-muted);
+}
+
+.bullets--muted li::before {
+  background: var(--text-dim);
+}
+
+.bullets--sub {
+  margin-top: 0.6rem;
+  gap: 0.35rem;
+}
+
+.bullets--sub li {
+  color: var(--text-muted);
+  font-size: 0.925rem;
+}
+
+.bullets--sub li::before {
+  width: 4px;
+  height: 4px;
+  background: var(--hairline-strong);
+}
+
+.split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-top: 1px solid var(--hairline-strong);
+}
+
+.split > div {
+  padding: 2rem 2rem 0 0;
+}
+
+.split > div + div {
+  padding-left: 2rem;
+  border-left: 1px solid var(--hairline);
+}
+
+.split-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  color: var(--text-muted);
+  margin-bottom: 1.25rem;
+}
+
+.split-label--accent {
+  color: var(--red-text);
+}
+
+.audiences {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+}
+
+.steps {
+  list-style: none;
+  counter-reset: step;
+  border-top: 1px solid var(--hairline-strong);
+}
+
+.steps > li {
+  counter-increment: step;
+  position: relative;
+  padding: 1.25rem 0 1.25rem 3rem;
+  border-bottom: 1px solid var(--hairline);
+}
+
+.steps > li::before {
+  content: counter(step, decimal-leading-zero);
+  position: absolute;
+  left: 0;
+  top: 1.35rem;
+  color: var(--red-text);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+}
+
+.steps strong {
+  display: block;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font-size: 0.95rem;
+}
+
+.steps p {
+  color: var(--text-muted);
+  margin-top: 0.3rem;
+}
+
+.benefits {
+  margin-top: 2rem;
+  padding: 1.75rem;
+  background: var(--panel);
+  border-left: 3px solid var(--red);
+}
+
+.doc-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  border-bottom: 1px solid var(--hairline-strong);
+}
+
+.doc-tab {
+  font: inherit;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.4px;
+  padding: 1rem 1.5rem;
+  color: var(--text-muted);
+  background: transparent;
+  border: 0;
+  border-bottom: 3px solid transparent;
+  margin-bottom: -1px;
+  cursor: pointer;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.doc-tab:hover {
+  color: var(--text);
+}
+
+.doc-tab[aria-selected="true"] {
+  color: var(--text);
+  border-bottom-color: var(--red);
+}
+
+.doc-viewer {
+  margin-top: 1.5rem;
+}
+
+.doc-frame {
+  display: block;
+  width: 100%;
+  height: 80vh;
+  min-height: 520px;
+  border: 1px solid var(--hairline-strong);
+  background: var(--panel);
+}
+
+.doc-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.doc-link {
+  color: var(--text);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.4px;
+  text-decoration: none;
+  border-bottom: 1px solid var(--red);
+  padding-bottom: 2px;
+}
+
+.doc-link:hover {
+  color: var(--red-text);
+}
+
+.doc-list {
+  display: none;
+  list-style: none;
+  border-top: 1px solid var(--hairline-strong);
+}
+
+.doc-list li {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem 1.5rem;
+  padding: 1.25rem 0;
+  border-bottom: 1px solid var(--hairline);
+}
+
+.doc-list-label {
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.doc-list-actions {
+  display: flex;
+  gap: 1.25rem;
 }
 
 /* Video modal */
@@ -895,6 +1211,45 @@ footer {
 
   .grid {
     grid-template-columns: 1fr;
+  }
+
+  .project-head,
+  .audiences,
+  .split {
+    grid-template-columns: 1fr;
+  }
+
+  .project-head {
+    gap: 2rem;
+  }
+
+  .project-shot {
+    max-width: 320px;
+  }
+
+  .split > div + div {
+    padding-left: 0;
+    border-left: 0;
+    border-top: 1px solid var(--hairline);
+    margin-top: 2rem;
+  }
+
+  .audiences {
+    gap: 0;
+  }
+
+  .detail-section {
+    margin-top: 4rem;
+  }
+
+  /* PDF en iframe peu fiables sur mobile → liste de liens */
+  .doc-tabs,
+  .doc-viewer {
+    display: none;
+  }
+
+  .doc-list {
+    display: block;
   }
 }
 

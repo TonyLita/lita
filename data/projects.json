@@ -13,10 +13,8 @@
     "description": "Site vitrine Web réactive pour l'organisation TANINJANAKA, construite avec React + Vite et stylée avec Tailwind. Le site est bilingue (FR/EN), accessible et orienté présentation/engagement, avec un footer contenant les crédits du créateur et des liens de contact.",
     "url": "video.html?project=p2",
     "image": "assets/img/taninjanaka.webp",
-    
     "video": "assets/media/demo2.mp4"
-  }
-  ,
+  },
   {
     "id": "p3",
     "title": "Application Vue.js",
@@ -24,8 +22,7 @@
     "url": "video.html?project=p3",
     "image": "assets/img/project3.svg",
     "video": "assets/media/demo-reel.mp4"
-  }
-  ,
+  },
   {
     "id": "p4",
     "title": "Projet réalisé le 25 juillet 2026",
@@ -33,5 +30,122 @@
     "url": "video.html?project=p4",
     "image": "assets/img/placeholder.svg",
     "video": "assets/media/demo4.mp4"
+  },
+  {
+    "id": "p5",
+    "title": "Suivi Travaux Routiers Antananarivo",
+    "description": "Plateforme participative de visualisation et de gestion des chantiers routiers d'Antananarivo : carte en temps réel, avancement des travaux, budgets, signalements citoyens et pilotage des équipes terrain.",
+    "image": "assets/img/projects/routiers-map.webp",
+    "page": "project.html?project=p5",
+    "detail": {
+      "tagline": "Plateforme participative de visualisation et de gestion des chantiers routiers de la ville.",
+      "intro": "Une application gratuite, accessible sur Internet et sur téléphone, qui affiche en temps réel :",
+      "features": [
+        "les chantiers routiers actuellement actifs à Antananarivo ;",
+        "leur emplacement exact sur la carte ;",
+        "leur état d'avancement : tout juste commencé, en cours ou terminé ;",
+        "la date de fin de travaux estimée."
+      ],
+      "closing": "Les citoyens voient tout, les managers dirigent les équipes sur le terrain : l'information est centralisée, transparente et efficace.",
+      "problem": {
+        "before": [
+          "Les routes se dégradent sans que personne ne sache quand elles seront réparées.",
+          "Les chantiers démarrent sans qu'aucune information ne soit donnée aux citoyens.",
+          "Les travaux traînent, faute de suivi centralisé.",
+          "La communication entre les autorités et la population est inexistante."
+        ],
+        "after": [
+          "Toutes les informations sur les travaux sont rassemblées en un seul endroit.",
+          "Les citoyens comprennent quelles routes sont prioritaires.",
+          "Les managers suivent la progression réelle des chantiers.",
+          "Une transparence totale qui permet de regagner la confiance."
+        ]
+      },
+      "audiences": [
+        {
+          "title": "Pour les citoyens",
+          "actions": [
+            {
+              "title": "Consulter la carte",
+              "text": "Voir tous les chantiers actifs d'Antananarivo."
+            },
+            {
+              "title": "Survoler un point",
+              "text": "Afficher le détail d'un chantier :",
+              "items": [
+                "la rue et le quartier exacts ;",
+                "le type de travaux (réparation ou renforcement) ;",
+                "la durée estimée ;",
+                "l'entreprise responsable."
+              ]
+            },
+            {
+              "title": "Consulter le tableau récapitulatif",
+              "text": "Accéder aux statistiques globales :",
+              "items": [
+                "le nombre de kilomètres de routes en réparation ;",
+                "le budget total consommé ;",
+                "le pourcentage d'avancement global de la ville."
+              ]
+            },
+            {
+              "title": "Signaler un problème",
+              "text": "Depuis le mobile, signaler un nouveau trou ou dégât, transmis directement aux autorités."
+            }
+          ],
+          "benefits": [
+            "Éviter les routes dégradées, pour plus de sécurité.",
+            "Planifier ses trajets et gagner du temps.",
+            "Comprendre les priorités de la collectivité, pour moins de frustration.",
+            "Participer à l'amélioration de la ville, par civisme."
+          ]
+        },
+        {
+          "title": "Pour les managers et autorités",
+          "actions": [
+            {
+              "title": "Tableau de bord centralisé",
+              "text": "Visualiser tous les chantiers d'un coup d'œil."
+            },
+            {
+              "title": "Ajouter et modifier des chantiers",
+              "text": "Mettre à jour leur statut en temps réel."
+            },
+            {
+              "title": "Suivre la progression",
+              "text": "Contrôler le budget dépensé, la surface réparée et le respect des délais."
+            },
+            {
+              "title": "Gérer les équipes",
+              "text": "Bloquer ou débloquer les comptes des agents de terrain."
+            },
+            {
+              "title": "Décider rapidement",
+              "text": "Si un chantier prend du retard, réaffecter le budget à une autre priorité."
+            }
+          ],
+          "benefits": [
+            "Une gestion centralisée, donc moins de désordre.",
+            "Des données précises pour de meilleures décisions.",
+            "Des responsabilités claires pour une meilleure exécution.",
+            "Des citoyens informés, qui renforcent la légitimité des décisions."
+          ]
+        }
+      ],
+      "docs": [
+        {
+          "label": "Documentation technique",
+          "file": "assets/img/projects/pdf-routiers/Documentation Technique.pdf"
+        },
+        {
+          "label": "Application web",
+          "file": "assets/img/projects/pdf-routiers/Web.pdf"
+        },
+        {
+          "label": "Application mobile",
+          "file": "assets/img/projects/pdf-routiers/Mobile.pdf"
+        }
+      ]
+    }
   }
 ]
